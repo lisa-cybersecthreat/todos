@@ -8,26 +8,26 @@ const dotenv = require("dotenv")
 
 const app= express();
 dotenv.config()
-// app.use(cors({
+app.use(cors({
 //     origin: true,
 //     credentials: true
-// }))
-app.use( (req, res, next) =>{
+}))
+// app.use( (req, res, next) =>{
 
-    // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', '*');
+//     // Website you wish to allow to connect
+//     res.setHeader('Access-Control-Allow-Origin', '*');
 
-    // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+//     // Request methods you wish to allow
+//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'content-type');
+//     // Request headers you wish to allow
+//     res.setHeader('Access-Control-Allow-Headers', 'content-type');
 
-    // Set to true if you need the website to include cookies in the requests sent to the API (e.g. in case you use sessions)
-    // res.setHeader('Access-Control-Allow-Credentials', true);
+//     // Set to true if you need the website to include cookies in the requests sent to the API (e.g. in case you use sessions)
+//     // res.setHeader('Access-Control-Allow-Credentials', true);
 
-    next();// Pass to next layer of middleware
-});
+//     next();// Pass to next layer of middleware
+// });
 
 app.use(express.json({extended: false}))
 
