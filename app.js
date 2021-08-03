@@ -9,8 +9,8 @@ const dotenv = require("dotenv")
 const app= express();
 dotenv.config()
 app.use(cors({
-    origin: true,
-    credentials: true
+//     origin: true,
+//     credentials: true
 }))
 app.use(express.json({extended: false}))
 
